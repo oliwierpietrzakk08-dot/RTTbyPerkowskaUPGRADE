@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook } from "lucide-react";
 
 export default function Footer() {
@@ -8,7 +9,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Kolumna 1: Logo i opis */}
           <div className="flex flex-col gap-4">
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="relative w-8 h-8 overflow-hidden">
+                <Image
+                  src="/logo.png"
+                  alt="RTT Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
               <span className="text-xl font-bold tracking-tight">RTT by Perkowska</span>
             </Link>
             <p className="text-sm text-gray-400 max-w-xs leading-loose">

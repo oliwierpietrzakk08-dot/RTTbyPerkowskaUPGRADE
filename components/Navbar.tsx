@@ -37,21 +37,16 @@ export default function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 md:w-12 md:h-12 overflow-hidden bg-muted flex items-center justify-center">
-              {/* Logo placeholder - użytkownik dostarczy /public/logo.png */}
+            <div className="relative w-10 h-10 md:w-12 md:h-12 overflow-hidden flex items-center justify-center">
               <Image
                 src="/logo.png"
-                alt="RTT Logo"
+                alt="RTT by Perkowska"
                 fill
                 className="object-contain"
-                onError={(e) => {
-                  // Fallback if logo.png doesn't exist yet
-                  (e.target as any).style.display = 'none';
-                }}
+                priority
               />
-              <span className="text-primary font-bold text-xs text-center px-1">RTT</span>
             </div>
-            <span className="text-primary font-bold text-base md:text-lg tracking-tight">
+            <span className="text-[#1B2D6E] font-bold text-base md:text-lg tracking-tight">
               RTT by Perkowska
             </span>
           </Link>
