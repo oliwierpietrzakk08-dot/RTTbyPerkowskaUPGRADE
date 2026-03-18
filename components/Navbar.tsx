@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Facebook } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -36,20 +36,32 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 md:w-12 md:h-12 overflow-hidden flex items-center justify-center">
-              <Image
-                src="/logo.png"
-                alt="RTT by Perkowska"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-            <span className="text-[#1B2D6E] font-bold text-base md:text-lg tracking-tight">
-              RTT by Perkowska
-            </span>
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              href="https://www.facebook.com/rttbyperkowska/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 border border-primary text-primary hover:bg-primary hover:text-white transition-all rounded-sm"
+              aria-label="Facebook"
+            >
+              <Facebook className="w-4 h-4" />
+            </Link>
+            
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="relative w-10 h-10 md:w-12 md:h-12 overflow-hidden flex items-center justify-center">
+                <Image
+                  src="/logo.png"
+                  alt="RTT by Perkowska"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+              <span className="text-[#1B2D6E] font-bold text-base md:text-lg tracking-tight">
+                RTT by Perkowska
+              </span>
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
