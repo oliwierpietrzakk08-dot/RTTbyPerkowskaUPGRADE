@@ -35,7 +35,8 @@ export default function Footer() {
             <div className="text-sm text-gray-300 flex flex-col gap-1">
               <p>ul. Zdunska 48, lok. 4</p>
               <p>99-400 Łowicz</p>
-              <p className="mt-2 text-gray-400 italic">[Telefon i e-mail wkrótce]</p>
+              <p className="mt-2">797 124 446</p>
+              <p>rttbyperkowska@gmail.com</p>
             </div>
             <div className="flex items-center gap-4 mt-2">
               <Link

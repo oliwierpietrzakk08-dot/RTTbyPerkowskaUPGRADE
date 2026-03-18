@@ -34,7 +34,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest text-foreground/40 mb-1">Telefon</p>
-                    <p className="text-sm font-medium italic text-foreground/50">[wkrótce]</p>
+                    <p className="text-sm font-medium">797 124 446</p>
                   </div>
                 </div>
 
@@ -44,7 +44,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest text-foreground/40 mb-1">E-mail</p>
-                    <p className="text-sm font-medium italic text-foreground/50">[wkrótce]</p>
+                    <p className="text-sm font-medium">rttbyperkowska@gmail.com</p>
                   </div>
                 </div>
 
@@ -67,11 +67,17 @@ export default function ContactPage() {
             </div>
 
             <div className="p-8 bg-white border border-border">
-              <h4 className="font-bold mb-4 tracking-tight">Godziny otwarcia</h4>
-              <p className="text-sm text-foreground/60 leading-loose">
-                Nasze biuro jest otwarte w godzinach trwania zajęć. <br />
-                Prosimy o kontakt telefoniczny lub mailowy w celu umówienia spotkania.
-              </p>
+              <h4 className="font-bold mb-4 tracking-tight uppercase text-xs">Informacje dodatkowe</h4>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest text-foreground/40 mb-1">Godziny kontaktu</p>
+                  <p className="text-sm text-foreground/70">Kontakt możliwy całą dobę</p>
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest text-foreground/40 mb-1">Godziny zajęć</p>
+                  <p className="text-sm text-foreground/70">Ustalane indywidualnie</p>
+                </div>
+              </div>
             </div>
           </div>
 

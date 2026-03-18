@@ -77,7 +77,7 @@ export default function ContactForm() {
                 id="email"
                 name="email"
                 type="email"
-                placeholder="email@przyklad.pl"
+              placeholder="rttbyperkowska@gmail.com"
                 required
                 className="rounded-none border-border focus:border-primary focus:ring-0 h-12"
               />
@@ -88,7 +88,7 @@ export default function ContactForm() {
                 id="phone"
                 name="phone"
                 type="tel"
-                placeholder="+48 000 000 000"
+              placeholder="797 124 446"
                 required
                 className="rounded-none border-border focus:border-primary focus:ring-0 h-12"
               />

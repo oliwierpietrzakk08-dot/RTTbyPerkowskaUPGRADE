@@ -70,9 +70,6 @@ export default function TestimonialsPage() {
                     <span className="text-xs uppercase tracking-widest text-foreground/40">Skuteczności CEA</span>
                 </div>
             </div>
-            <p className="mt-12 text-sm text-foreground/60 max-w-2xl mx-auto italic">
-                // TODO: zastąpić prawdziwymi opiniami po zebraniu ich od uczniów
-            </p>
         </div>
       </div>
     </div>
