@@ -1,11 +1,10 @@
-"use client";
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
+import { Loader2, AlertCircle } from "lucide-react";
 import { 
   Select, 
   SelectContent, 
@@ -15,21 +14,40 @@ import {
 } from "@/components/ui/select";
 
 export default function ContactForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setError(null);
+
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
     
-    // Walidacja i logowanie
-    console.log("Formularz wysłany:", data);
-    
-    // Symulacja sukcesu
-    setIsSubmitted(true);
-    
-    // Reset po 3 sek
-    setTimeout(() => setIsSubmitted(false), 3000);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Wystąpił błąd podczas wysyłania formularza.');
+      }
+
+      setIsSubmitted(true);
+    } catch (err: any) {
+      console.error("Błąd wysyłania formularza:", err);
+      setError(err.message || 'Wystąpił nieoczekiwany błąd. Spróbuj ponownie później.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -48,17 +66,31 @@ export default function ContactForm() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={3}
-                d="5 13l4 4L19 7"
+                d="M5 13l4 4L19 7"
               />
             </svg>
           </div>
           <h3 className="text-2xl font-bold tracking-tight mb-2 uppercase">Dziękujemy!</h3>
           <p className="text-sm text-foreground/50 leading-loose">
-            Twoje zgłoszenie zostało wysłane. Skontaktujemy się z Tobą najszybciej jak to możliwe.
+            Twoje zgłoszenie zostało wysłane. Skontaktujemy się z Tobą w ciągu 24 godzin.
           </p>
+          <Button 
+            onClick={() => setIsSubmitted(false)}
+            variant="outline" 
+            className="mt-8 rounded-none border-primary text-primary hover:bg-primary hover:text-white"
+          >
+            Wyślij kolejną wiadomość
+          </Button>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6">
+          {error && (
+            <div className="p-4 bg-red-50 border border-red-200 text-red-600 text-sm flex items-start gap-3 animate-in fade-in slide-in-from-top-2">
+              <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
+              <p>{error}</p>
+            </div>
+          )}
+
           <div className="space-y-2">
             <Label htmlFor="fullName" className="text-xs font-bold uppercase tracking-widest text-foreground/70">Imię i nazwisko *</Label>
             <Input
@@ -66,6 +98,7 @@ export default function ContactForm() {
               name="fullName"
               placeholder="Jan Kowalski"
               required
+              disabled={isSubmitting}
               className="rounded-none border-border focus:border-primary focus:ring-0 h-12"
             />
           </div>
@@ -77,8 +110,9 @@ export default function ContactForm() {
                 id="email"
                 name="email"
                 type="email"
-              placeholder="rttbyperkowska@gmail.com"
+                placeholder="twoj@email.com"
                 required
+                disabled={isSubmitting}
                 className="rounded-none border-border focus:border-primary focus:ring-0 h-12"
               />
             </div>
@@ -88,8 +122,9 @@ export default function ContactForm() {
                 id="phone"
                 name="phone"
                 type="tel"
-              placeholder="797 124 446"
+                placeholder="797 124 446"
                 required
+                disabled={isSubmitting}
                 className="rounded-none border-border focus:border-primary focus:ring-0 h-12"
               />
             </div>
@@ -105,12 +140,13 @@ export default function ContactForm() {
                 min={10}
                 max={20}
                 required
+                disabled={isSubmitting}
                 className="rounded-none border-border focus:border-primary focus:ring-0 h-12"
               />
             </div>
             <div className="space-y-2">
               <Label htmlFor="interest" className="text-xs font-bold uppercase tracking-widest text-foreground/70">Interesuje mnie *</Label>
-              <Select name="interest" required>
+              <Select name="interest" required disabled={isSubmitting}>
                 <SelectTrigger className="rounded-none border-border focus:border-primary focus:ring-0 h-12">
                   <SelectValue placeholder="Wybierz opcję" />
                 </SelectTrigger>
@@ -125,17 +161,19 @@ export default function ContactForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="message" className="text-xs font-bold uppercase tracking-widest text-foreground/70">Wiadomość (opcjonalnie)</Label>
+            <Label htmlFor="message" className="text-xs font-bold uppercase tracking-widest text-foreground/70">Wiadomość *</Label>
             <Textarea
               id="message"
               name="message"
               placeholder="Twoja wiadomość..."
+              required
+              disabled={isSubmitting}
               className="rounded-none border-border focus:border-primary focus:ring-0 min-h-[120px]"
             />
           </div>
 
           <div className="flex items-start space-x-3 pt-2">
-            <Checkbox id="terms" name="terms" required className="mt-1 rounded-none data-[state=checked]:bg-primary" />
+            <Checkbox id="terms" name="terms" required disabled={isSubmitting} className="mt-1 rounded-none data-[state=checked]:bg-primary" />
             <Label
               htmlFor="terms"
               className="text-xs text-foreground/60 leading-relaxed cursor-pointer"
@@ -146,9 +184,17 @@ export default function ContactForm() {
 
           <Button
             type="submit"
-            className="w-full h-14 bg-primary text-white font-bold uppercase tracking-widest text-sm hover:bg-primary/90 rounded-none border-none transition-all mt-4"
+            disabled={isSubmitting}
+            className="w-full h-14 bg-primary text-white font-bold uppercase tracking-widest text-sm hover:bg-primary/90 rounded-none border-none transition-all mt-4 flex items-center justify-center gap-2"
           >
-            Wyślij zgłoszenie
+            {isSubmitting ? (
+              <>
+                <Loader2 className="w-5 h-5 animate-spin" />
+                Wysyłanie...
+              </>
+            ) : (
+              "Wyślij zgłoszenie"
+            )}
           </Button>
           
           <p className="text-[10px] text-foreground/40 text-center italic">
