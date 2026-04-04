@@ -31,8 +31,6 @@ export default function Footer() {
             <nav className="flex flex-col gap-2">
               <Link href="/o-nas" className="text-sm text-gray-300 hover:text-white transition-colors">O nas</Link>
               <Link href="/oferta" className="text-sm text-gray-300 hover:text-white transition-colors">Oferta</Link>
-              <Link href="/egzaminy" className="text-sm text-gray-300 hover:text-white transition-colors">Egzaminy</Link>
-              <Link href="/cennik" className="text-sm text-gray-300 hover:text-white transition-colors">Cennik</Link>
               <Link href="/opinie" className="text-sm text-gray-300 hover:text-white transition-colors">Opinie</Link>
               <Link href="/kontakt" className="text-sm text-gray-300 hover:text-white transition-colors">Kontakt</Link>
             </nav>

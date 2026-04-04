@@ -19,6 +19,16 @@ export default function HeroSection() {
           >
             <Image src="/logo.png" alt="RTT by Perkowska logo" width={140} height={140} className="object-contain" />
           </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+            className="mb-4"
+          >
+            <p className="text-xs md:text-sm font-bold uppercase tracking-[0.2em] text-foreground/50">
+              PONAD 15 LAT DOŚWIADCZENIA | EST. 2008
+            </p>
+          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -35,8 +45,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="text-lg md:text-xl text-foreground/80 leading-loose mb-10 max-w-2xl mx-auto"
           >
-            Szkoła języka angielskiego w Łowiczu prowadzona z pasją przez Krystynę Perkowską. 
-            Ponad 50 uczniów ze 100% skutecznością na egzaminach CAE.
+            Szkoła języka angielskiego w Łowiczu, która od 2008 roku pomaga skutecznie przełamywać bariery komunikacyjne. Nasze autorskie metody nauczania prowadzą do realnych wyników i sukcesów na egzaminach CAE.
           </motion.p>
 
           <motion.div
