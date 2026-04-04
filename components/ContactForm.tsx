@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -153,7 +155,7 @@ export default function ContactForm() {
                 <SelectContent className="rounded-none border-border">
                   <SelectItem value="kurs-grupowy">Kurs grupowy</SelectItem>
                   <SelectItem value="indywidualne">Zajęcia indywidualne</SelectItem>
-                  <SelectItem value="egzamin-cea">Egzamin CEA</SelectItem>
+                  <SelectItem value="egzamin-cae">Egzamin CAE</SelectItem>
                   <SelectItem value="matura">Matura</SelectItem>
                 </SelectContent>
               </Select>

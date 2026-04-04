@@ -29,7 +29,7 @@ const pricingPlans = [
     highlight: true,
   },
   {
-    title: "Egzaminy CEA / Matura",
+    title: "Egzaminy CAE / Matura",
     description: "Specjalistyczne przygotowanie egzaminacyjne.",
     features: [
       "Praca z arkuszami",

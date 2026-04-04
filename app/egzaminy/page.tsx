@@ -14,11 +14,11 @@ export default function ExamsPage() {
     <div className="py-20 md:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <SectionHeader 
-          title="Egzaminy CEA i Matura" 
+          title="Egzaminy CAE i Matura" 
           subtitle="Profesjonalne przygotowanie do najważniejszych certyfikatów językowych."
         />
         
-        {/* Sekcja CEA */}
+        {/* Sekcja CAE */}
         <div className="mb-24">
           <h3 className="text-2xl font-bold tracking-tight mb-8">Cambridge English Assessment (CEA)</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -75,7 +75,7 @@ export default function ExamsPage() {
             <div className="bg-secondary p-12">
               <h4 className="text-2xl font-bold mb-4 tracking-tight">Chcesz zdać egzamin?</h4>
               <p className="text-sm text-foreground/60 mb-8 leading-loose">
-                Zapisz się na zajęcia już dziś i dołącz do grona naszych uczniów, którzy z sukcesem zdają egzaminy CEA i maturalne.
+                Zapisz się na zajęcia już dziś i dołącz do grona naszych uczniów, którzy z sukcesem zdają egzaminy CAE i maturalne.
               </p>
               <Link
                 href="/kontakt"

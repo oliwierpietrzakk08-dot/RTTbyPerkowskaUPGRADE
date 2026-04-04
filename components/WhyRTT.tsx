@@ -6,7 +6,7 @@ const reasons = [
     description: "Nasi nauczyciele to profesjonaliści, którzy kochają swoją pracę i zarażają entuzjazmem do nauki języka.",
   },
   {
-    title: "Małe grupy (max 10 osób)",
+    title: "Nauka odbywa się w grupach",
     description: "Kameralne grupy pozwalają na indywidualne podejście do każdego ucznia i lepsze skupienie na rozwoju.",
   },
   {

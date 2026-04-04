@@ -67,7 +67,7 @@ export default function TestimonialsPage() {
                 </div>
                 <div className="flex flex-col gap-2">
                     <span className="text-4xl md:text-5xl font-bold tracking-tight text-destructive">100%</span>
-                    <span className="text-xs uppercase tracking-widest text-foreground/40">Skuteczności CEA</span>
+                    <span className="text-xs uppercase tracking-widest text-foreground/40">Skuteczności CAE</span>
                 </div>
             </div>
         </div>

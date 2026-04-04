@@ -28,7 +28,7 @@ const offers = [
     ],
   },
   {
-    title: "Przygotowanie do egzaminów CEA",
+    title: "Przygotowanie do egzaminów CAE",
     items: [
       "Wszystkie poziomy egzaminów Cambridge",
       "100% skuteczność dotychczasowych uczniów",

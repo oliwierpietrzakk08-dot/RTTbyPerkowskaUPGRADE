@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 const values = [
   { title: "Pasja", description: "Nauczanie to nasza misja, którą realizujemy z pełnym zaangażowaniem." },
-  { title: "Skuteczność", description: "100% zdawalności egzaminów CEA to dowód na wysoką jakość naszych kursów." },
+  { title: "Skuteczność", description: "100% zdawalności egzaminów CAE to dowód na wysoką jakość naszych kursów." },
   { title: "Indywidualne podejście", description: "Dostosowujemy tempo i metodę pracy do potrzeb i możliwości każdego ucznia." },
 ];
 

@@ -2,14 +2,23 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center bg-white overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6 text-center lg:text-left">
-        <div className="max-w-3xl">
+      <div className="container mx-auto px-4 md:px-6 text-center">
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex justify-center mb-6"
+          >
+            <Image src="/logo.png" alt="RTT by Perkowska logo" width={140} height={140} className="object-contain" />
+          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -24,17 +33,17 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-lg md:text-xl text-foreground/80 leading-loose mb-10 max-w-2xl mx-auto lg:mx-0"
+            className="text-lg md:text-xl text-foreground/80 leading-loose mb-10 max-w-2xl mx-auto"
           >
             Szkoła języka angielskiego w Łowiczu prowadzona z pasją przez Krystynę Perkowską. 
-            Ponad 50 uczniów ze 100% skutecznością na egzaminach CEA.
+            Ponad 50 uczniów ze 100% skutecznością na egzaminach CAE.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="flex flex-wrap gap-4 justify-center lg:justify-start"
+            className="flex flex-wrap gap-4 justify-center"
           >
             <Link
               href="/kontakt"
