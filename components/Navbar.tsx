@@ -16,6 +16,7 @@ const ofertaLinks = [
 const navLinks = [
   { href: "/o-nas", label: "O nas" },
   { href: "/opinie", label: "Opinie" },
+  { href: "/faq", label: "FAQ" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
