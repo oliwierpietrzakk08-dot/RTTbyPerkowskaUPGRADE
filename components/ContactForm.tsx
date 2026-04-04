@@ -29,21 +29,10 @@ export default function ContactForm() {
     const data = Object.fromEntries(formData.entries());
     
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result.error || 'Wystąpił błąd podczas wysyłania formularza.');
-      }
-
+      console.log("Form submitted locally with data:", data);
+      await new Promise(resolve => setTimeout(resolve, 1000));
       setIsSubmitted(true);
+
     } catch (err: any) {
       console.error("Błąd wysyłania formularza:", err);
       setError(err.message || 'Wystąpił nieoczekiwany błąd. Spróbuj ponownie później.');
