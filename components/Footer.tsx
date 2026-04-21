@@ -13,12 +13,12 @@ export default function Footer() {
               <div className="relative w-8 h-8 overflow-hidden">
                 <Image
                   src="/logo.png"
-                  alt="RTT Logo"
+                  alt="CEL Creative English Logo"
                   fill
                   className="object-contain"
                 />
               </div>
-              <span className="text-xl font-bold tracking-tight">RTT by Perkowska</span>
+              <span className="text-xl font-bold tracking-tight">CEL Creative English</span>
             </Link>
             <p className="text-sm text-gray-400 max-w-xs leading-loose">
               Szkoła języka angielskiego w Łowiczu prowadzona z pasją, otwierająca drzwi do nieogarniczonych możliwości językowych.
@@ -27,7 +27,7 @@ export default function Footer() {
 
           {/* Kolumna 2: Nawigacja */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-sm font-bold uppercase tracking-widest text-[#CC2229]">Strona</h3>
+            <h3 className="text-sm font-bold uppercase tracking-widest text-white/60">Strona</h3>
             <nav className="flex flex-col gap-2">
               <Link href="/o-nas" className="text-sm text-gray-300 hover:text-white transition-colors">O nas</Link>
               <Link href="/oferta" className="text-sm text-gray-300 hover:text-white transition-colors">Oferta</Link>
@@ -39,7 +39,7 @@ export default function Footer() {
 
           {/* Kolumna 3: Kontakt i Social Media */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-sm font-bold uppercase tracking-widest text-[#CC2229]">Kontakt</h3>
+            <h3 className="text-sm font-bold uppercase tracking-widest text-white/60">Kontakt</h3>
             <div className="text-sm text-gray-300 flex flex-col gap-1">
               <p>ul. Zdunska 48, lok. 4</p>
               <p>99-400 Łowicz</p>
@@ -62,7 +62,7 @@ export default function Footer() {
 
         <div className="mt-16 pt-8 border-t border-gray-800 text-center">
           <p className="text-xs text-gray-500">
-            © {new Date().getFullYear()} RTT by Perkowska. Wszelkie prawa zastrzeżone.
+            © {new Date().getFullYear()} CEL Creative English. Wszelkie prawa zastrzeżone.
           </p>
         </div>
       </div>

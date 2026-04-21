@@ -17,7 +17,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="flex justify-center mb-6"
           >
-            <Image src="/logo.png" alt="RTT by Perkowska logo" width={140} height={140} className="object-contain" />
+            <Image src="/logo.png" alt="CEL Creative English logo" width={140} height={140} className="object-contain" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

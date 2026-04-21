@@ -12,7 +12,7 @@ export default function MapSection() {
         </div>
         <div className="w-full overflow-hidden border-2 border-primary/20 shadow-lg" style={{ height: "450px" }}>
           <iframe
-            title="Lokalizacja RTT by Perkowska"
+            title="Lokalizacja CEL Creative English"
             src="https://maps.google.com/maps?q=ul.+Zdunska+48,+99-400+Łowicz,+Poland&output=embed"
             width="100%"
             height="100%"

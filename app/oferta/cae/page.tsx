@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Certyfikat CAE - RTT by Perkowska",
+  title: "Certyfikat CAE - CEL Creative English",
   description:
     "Intensywne przygotowanie do egzaminu Cambridge Advanced English (CAE). 100% naszych uczniów zdaje ten egzamin.",
 };

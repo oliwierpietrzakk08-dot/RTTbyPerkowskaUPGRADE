@@ -27,12 +27,20 @@ export default function ContactForm() {
 
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
-    
-    try {
-      console.log("Form submitted locally with data:", data);
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setIsSubmitted(true);
 
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) {
+        const json = await res.json();
+        throw new Error(json.error || 'Błąd serwera');
+      }
+
+      setIsSubmitted(true);
     } catch (err: any) {
       console.error("Błąd wysyłania formularza:", err);
       setError(err.message || 'Wystąpił nieoczekiwany błąd. Spróbuj ponownie później.');
@@ -169,7 +177,7 @@ export default function ContactForm() {
               htmlFor="terms"
               className="text-xs text-foreground/60 leading-relaxed cursor-pointer"
             >
-              Wyrażam zgodę na przetwarzanie moich danych osobowych w celu kontaktu oraz przedstawienia oferty szkoły języka angielskiego RTT by Perkowska. *
+              Wyrażam zgodę na przetwarzanie moich danych osobowych w celu kontaktu oraz przedstawienia oferty szkoły języka angielskiego CEL Creative English. *
             </Label>
           </div>
 

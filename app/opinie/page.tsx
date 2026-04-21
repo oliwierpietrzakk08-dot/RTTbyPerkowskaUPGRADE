@@ -2,7 +2,7 @@ import ReviewsSlider from "@/components/ReviewsSlider";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Opinie - RTT by Perkowska",
+  title: "Opinie - CEL Creative English",
   description: "Przeczytaj opinie naszych uczniów. Zobacz, w jaki sposób nasze indywidualne podejście pomaga osiągać cele na egzaminie CAE.",
 };
 

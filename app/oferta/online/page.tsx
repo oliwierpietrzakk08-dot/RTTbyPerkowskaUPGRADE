@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Nauka online (Zoom) - RTT by Perkowska",
+  title: "Nauka online (Zoom) - CEL Creative English",
   description:
     "Zajęcia grupowe online przez Zoom — ta sama jakość co stacjonarnie, z dowolnego miejsca. Dla uczniów w każdym wieku.",
 };

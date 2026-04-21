@@ -67,14 +67,14 @@ export default function Navbar() {
               <div className="relative w-10 h-10 md:w-12 md:h-12 overflow-hidden flex items-center justify-center">
                 <Image
                   src="/logo.png"
-                  alt="RTT by Perkowska"
+                  alt="CEL Creative English"
                   fill
                   className="object-contain"
                   priority
                 />
               </div>
-              <span className="text-[#1B2D6E] font-bold text-base md:text-lg tracking-tight">
-                RTT by Perkowska
+              <span className="text-[#0D1B3E] font-bold text-base md:text-lg tracking-tight">
+                CEL Creative English
               </span>
             </Link>
 

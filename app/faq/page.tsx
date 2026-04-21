@@ -10,8 +10,8 @@ import { Metadata } from "next";
 // };
 
 const faqData = [
-  { q: "W którym roku powstała szkoła RTT by Perkowska?", a: "Nasza szkoła została założona w 2008 roku i od blisko 20 lat z sukcesami kształcimy mieszkańców Łowicza i okolic." },
-  { q: "Co wyróżnia Państwa metodę nauczania?", a: "Fundamentem szkoły jest autorska metoda Krystyny Perkowskiej. Wybierając RTT, masz pewność, że nauka przebiega według ściśle określonego, skutecznego planu, który osobiście nadzoruje założycielka szkoły." },
+  { q: "W którym roku powstała szkoła CEL Creative English?", a: "Nasza szkoła została założona w 2008 roku i od blisko 20 lat z sukcesami kształcimy mieszkańców Łowicza i okolic." },
+  { q: "Co wyróżnia Państwa metodę nauczania?", a: "Fundamentem szkoły jest autorska metoda Krystyny Perkowskiej. Wybierając CEL Creative English, masz pewność, że nauka przebiega według ściśle określonego, skutecznego planu, który osobiście nadzoruje założycielka szkoły." },
   { q: "Czy przygotowujecie Państwo do certyfikatu CAE?", a: "Tak, przygotowanie do egzaminów Cambridge (szczególnie CAE) to jedna z naszych głównych specjalizacji." },
   { q: "Jak wygląda przygotowanie do matury?", a: "Prowadzimy intensywne kursy maturalne, skupiając się na technikach egzaminacyjnych, pisaniu wypracowań i przełamywaniu bariery w mówieniu." },
   { q: "Jaka jest skuteczność Państwa uczniów?", a: "Od lat notujemy bardzo wysoką zdawalność. Nasi uczniowie często w ciągu kilku miesięcy przeskakują z ocen 2/3 na bardzo dobre 5." },

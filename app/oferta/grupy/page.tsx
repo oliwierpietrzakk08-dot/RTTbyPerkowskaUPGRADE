@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Nauka w grupach (stacjonarnie) - RTT by Perkowska",
+  title: "Nauka w grupach (stacjonarnie) - CEL Creative English",
   description:
     "Kursy stacjonarne języka angielskiego w Łowiczu. Kameralne grupy, sprawdzone metody, szybkie postępy — od poziomu 1 do 8.",
 };

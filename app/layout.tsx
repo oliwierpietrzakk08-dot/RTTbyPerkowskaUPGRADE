@@ -11,9 +11,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "RTT by Perkowska - Szkoła Języka Angielskiego w Łowiczu",
+  title: "CEL Creative English - Szkoła Języka Angielskiego w Łowiczu",
   description: "Szkoła języka angielskiego w Łowiczu prowadzona z pasją przez Krystynę Perkowską. 100% skuteczności na egzaminach CAE.",
-  keywords: ["angielski Łowicz", "szkoła językowa Łowicz", "RTT by Perkowska", "egzaminy CAE", "matura angielski"],
+  keywords: ["angielski Łowicz", "szkoła językowa Łowicz", "CEL Creative English", "egzaminy CAE", "matura angielski"],
 };
 
 export default function RootLayout({

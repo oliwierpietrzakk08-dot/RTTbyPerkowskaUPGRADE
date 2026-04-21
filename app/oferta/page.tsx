@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { BookOpen, GraduationCap, Monitor, FileText } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Oferta - RTT by Perkowska",
+  title: "Oferta - CEL Creative English",
   description:
     "Sprawdź ofertę kursów języka angielskiego w Łowiczu. Kursy stacjonarne, przygotowanie do egzaminu CAE, lekcje online i powtórka maturalna.",
 };

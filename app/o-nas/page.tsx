@@ -2,9 +2,9 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "O nas - RTT by Perkowska",
+  title: "O nas - CEL Creative English",
   description:
-    "Poznaj szkołę RTT by Perkowska. Szkoła języka angielskiego w Łowiczu z indywidualnym podejściem i 100% skutecznością na egzaminach CAE.",
+    "Poznaj szkołę CEL Creative English. Szkoła języka angielskiego w Łowiczu z indywidualnym podejściem i 100% skutecznością na egzaminach CAE.",
 };
 
 const blocks = [
@@ -12,7 +12,7 @@ const blocks = [
     number: "01",
     title: "Nasza misja",
     description:
-      "Wierzymy, że język angielski otwiera drzwi — do kariery, do świata i do nowych możliwości. Szkoła RTT by Perkowska powstała po to, by każdy uczeń, niezależnie od wieku i poziomu zaawansowania, mógł osiągnąć realne, mierzalne rezultaty.",
+      "Wierzymy, że język angielski otwiera drzwi — do kariery, do świata i do nowych możliwości. Szkoła CEL Creative English powstała po to, by każdy uczeń, niezależnie od wieku i poziomu zaawansowania, mógł osiągnąć realne, mierzalne rezultaty.",
   },
   {
     number: "02",
@@ -51,7 +51,7 @@ export default function AboutPage() {
           <div className="relative w-full aspect-[4/5] bg-secondary overflow-hidden">
             <Image
               src="/krystyna.jpg"
-              alt="Krystyna Perkowska – założycielka RTT by Perkowska"
+              alt="Krystyna Perkowska – założycielka CEL Creative English"
               fill
               className="object-cover object-top"
             />

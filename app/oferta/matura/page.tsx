@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Przygotowanie do matury - RTT by Perkowska",
+  title: "Przygotowanie do matury - CEL Creative English",
   description:
     "Intensywna powtórka maturalna z języka angielskiego online. Omawianie arkuszy, pewniaków egzaminacyjnych i skutecznych technik zdawania matury.",
 };

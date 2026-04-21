@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Kontakt - RTT by Perkowska",
+  title: "Kontakt - CEL Creative English",
   description: "Skontaktuj się z nami. Zadzwoń lub wyślij wiadomość, aby zarezerwować miejsce w grupie na kursie języka angielskiego lub zajęciach online.",
 };
 
