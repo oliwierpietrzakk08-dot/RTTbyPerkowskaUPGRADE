@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const OWNER_EMAIL = 'rttbyperkowska@gmail.com';
 
 const interestLabels: Record<string, string> = {
@@ -14,6 +12,7 @@ const interestLabels: Record<string, string> = {
 
 export async function POST(req: Request) {
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const body = await req.json();
     const { fullName, email, phone, studentAge, interest, message } = body;
 
