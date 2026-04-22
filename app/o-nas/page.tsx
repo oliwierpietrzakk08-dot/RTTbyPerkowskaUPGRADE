@@ -50,7 +50,7 @@ export default function AboutPage() {
           {/* Photo */}
           <div className="relative w-full aspect-[4/5] bg-secondary overflow-hidden">
             <Image
-              src="/krystyna.jpg"
+              src="/panikrystyna.JPG"
               alt="Krystyna Perkowska – założycielka CEL Creative English"
               fill
               className="object-cover object-top"
